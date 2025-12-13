@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Linal/Linal.csproj" />
+  <Project Path="Test/Test.csproj" />
+</Solution>
