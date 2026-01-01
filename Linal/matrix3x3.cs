@@ -107,7 +107,7 @@ namespace Linal
 		{
 			return new matrix3x3(
 				1, 0, 0,
-				0, Math.Cos(a),	-1 * Math.Sin(a),
+				0, Math.Cos(a),	-Math.Sin(a),
 				0, Math.Sin(a), Math.Cos(a));
 		}
 		public static matrix3x3 YRotationMatrix(double a)
@@ -115,12 +115,12 @@ namespace Linal
 			return new matrix3x3(
 				Math.Cos(a), 0, Math.Sin(a),
 				0, 1, 0,
-				-1 * Math.Sin(a), 0, Math.Cos(a));
+				-Math.Sin(a), 0, Math.Cos(a));
 		}
 		public static matrix3x3 ZRotationMatrix(double a)
 		{
 			return new matrix3x3(
-			Math.Cos(a), -1 * Math.Sin(a), 0,
+			Math.Cos(a), -Math.Sin(a), 0,
 			Math.Sin(a), Math.Cos(a), 0,
 			0, 0, 1);
 		}
