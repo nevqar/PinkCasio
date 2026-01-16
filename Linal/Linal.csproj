@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="matrix2x2.cs" />
     <Compile Include="matrix3x3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="quaternion.cs" />

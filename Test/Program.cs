@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Claims;
 using Linal;
 
 namespace Test
@@ -10,7 +11,8 @@ namespace Test
 			vec2 a = new vec2(0, 1);
 			vec3 b = new vec3(0, 1, 2);
 			quaternion c = new quaternion(0, 1, 2, 3);
-			matrix3x3 d = new matrix3x3(0, 1, 2, 3, 4, 5, 6, 7, 8);
+			matrix2x2 d = new matrix2x2(0, 1, 2, 3);
+			matrix3x3 e = new matrix3x3(0, 1, 2, 3, 4, 5, 6, 7, 8);
 
 			Console.WriteLine(".ToString() methods demonstration");
 			Console.WriteLine();
@@ -27,8 +29,15 @@ namespace Test
 			Console.WriteLine(c);
 			Console.WriteLine();
 
-			Console.WriteLine("matrix3x3 >> ");
+			Console.WriteLine("matrix2x2 >> ");
 			Console.WriteLine(d);
+			Console.WriteLine();
+
+			Console.WriteLine("matrix3x3 >> ");
+			Console.WriteLine(e);
+			Console.WriteLine();
+
+			Console.WriteLine(matrix2x2.Cramer(d, a));
 		}
 	}
 }

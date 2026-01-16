@@ -87,7 +87,7 @@ namespace Linal
 			double det = Det();
 			if (det == 0)
 				throw new ArgumentException("Cannot inverse matrix with zero determinant");
-			return (1/ det) * Transpose().Minor();
+			return (1/ det) * Cofactor().Transpose();
 		}
 		public matrix3x3 Cofactor()
 		{
