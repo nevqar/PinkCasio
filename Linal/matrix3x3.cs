@@ -124,6 +124,22 @@ namespace Linal
 			Math.Sin(a), Math.Cos(a), 0,
 			0, 0, 1);
 		}
+		public static vec3 Cramer(matrix3x3 a, vec3 b)
+		{
+			double det = a.Det();
+			if (det == 0)
+				throw new Exception("Determinant equals zero. No solution");
+			matrix3x3 ax = a;
+			ax.i = b;
+			double detx = ax.Det();
+			matrix3x3 ay = a;
+			ay.j = b;
+			double dety = ay.Det();
+			matrix3x3 az = a;
+			ay.k = b;
+			double detz = az.Det();
+			return new vec3(detx / det, dety / det, detz / det);
+		}
 		override public string ToString()
 		{
 			return  "[" + "\t" + ix + "\t" + jx + "\t" + kx + "\t" + "]" + "\r\n" +

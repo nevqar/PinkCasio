@@ -38,6 +38,7 @@ namespace Test
 			Console.WriteLine();
 
 			Console.WriteLine(matrix2x2.Cramer(d, a));
+			Console.WriteLine(matrix3x3.Cramer(e, b));
 		}
 	}
 }
