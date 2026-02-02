@@ -7,8 +7,8 @@
     <ProjectGuid>{BA281BFF-C1A4-4B4D-A805-AC36F9460341}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Linal</RootNamespace>
-    <AssemblyName>Linal</AssemblyName>
+    <RootNamespace>PinkCasio</RootNamespace>
+    <AssemblyName>PinkCasio</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
