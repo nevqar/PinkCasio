@@ -3,9 +3,9 @@ namespace PinkCasio.Decimal.Linal
 {
 	public struct matrix3x3m
 	{
-		public double ix, jx, kx;
-		public double iy, jy, ky;
-		public double iz, jz, kz;
+		public decimal ix, jx, kx;
+		public decimal iy, jy, ky;
+		public decimal iz, jz, kz;
 
 		public vec3m i
 		{
@@ -44,16 +44,16 @@ namespace PinkCasio.Decimal.Linal
 			0, 0, 1);
 
 		public matrix3x3m(
-			double a, double b, double c,
-			double d, double e, double f,
-			double g, double h, double i)
+			decimal a, decimal b, decimal c,
+			decimal d, decimal e, decimal f,
+			decimal g, decimal h, decimal i)
 		{
 			ix = a; jx = b; kx = c;
 			iy = d; jy = e; ky = f;
 			iz = g; jz = h; kz = i;
 		}
 
-		public static matrix3x3m operator *(double a, matrix3x3m b)
+		public static matrix3x3m operator *(decimal a, matrix3x3m b)
 		{
 			return new matrix3x3m(
 				a * b.ix, a * b.jx, a * b.kx,
@@ -68,7 +68,7 @@ namespace PinkCasio.Decimal.Linal
 			c.k = a * (b * identity.k);
 			return c;
 		}
-		public double Det()
+		public decimal Det()
 		{
 			return
 			+ ix * jy * kz
@@ -80,7 +80,7 @@ namespace PinkCasio.Decimal.Linal
 		}
 		public matrix3x3m Inverse()
 		{
-			double det = Det();
+			decimal det = Det();
 			if (det == 0)
 				throw new ArgumentException("Cannot inverse matrix with zero determinant");
 			return (1/ det) * Cofactor().Transpose();
@@ -99,27 +99,27 @@ namespace PinkCasio.Decimal.Linal
 				jx, jy, jz,
 				kx, ky, kz);
 		}
-		public static matrix3x3m XRotationMatrix(double a)
-		{
-			return new matrix3x3m(
-				1, 0, 0,
-				0, Math.Cos(a),	-Math.Sin(a),
-				0, Math.Sin(a), Math.Cos(a));
-		}
-		public static matrix3x3m YRotationMatrix(double a)
-		{
-			return new matrix3x3m(
-				Math.Cos(a), 0, Math.Sin(a),
-				0, 1, 0,
-				-Math.Sin(a), 0, Math.Cos(a));
-		}
-		public static matrix3x3m ZRotationMatrix(double a)
-		{
-			return new matrix3x3m(
-			Math.Cos(a), -Math.Sin(a), 0,
-			Math.Sin(a), Math.Cos(a), 0,
-			0, 0, 1);
-		}
+		//public static matrix3x3m XRotationMatrix(decimal a)
+		//{
+		//	return new matrix3x3m(
+		//		1, 0, 0,
+		//		0, Math.Cos(a),	-Math.Sin(a),
+		//		0, Math.Sin(a), Math.Cos(a));
+		//}
+		//public static matrix3x3m YRotationMatrix(decimal a)
+		//{
+		//	return new matrix3x3m(
+		//		Math.Cos(a), 0, Math.Sin(a),
+		//		0, 1, 0,
+		//		-Math.Sin(a), 0, Math.Cos(a));
+		//}
+		//public static matrix3x3m ZRotationMatrix(decimal a)
+		//{
+		//	return new matrix3x3m(
+		//	Math.Cos(a), -Math.Sin(a), 0,
+		//	Math.Sin(a), Math.Cos(a), 0,
+		//	0, 0, 1);
+		//}
 		override public string ToString()
 		{
 			return  "[" + "\t" + ix + "\t" + jx + "\t" + kx + "\t" + "]" + "\r\n" +

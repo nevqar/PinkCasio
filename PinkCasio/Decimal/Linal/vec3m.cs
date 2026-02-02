@@ -3,14 +3,14 @@ namespace PinkCasio.Decimal.Linal
 {
 	public struct vec3m
 	{
-		public double x, y, z;	
-		public vec3m(double x, double y, double z)
+		public decimal x, y, z;	
+		public vec3m(decimal x, decimal y, decimal z)
 		{
 			this.x = x;
 			this.y = y;
 			this.z = z;
 		}
-		public vec3m(double a)
+		public vec3m(decimal a)
 		{
 			this.x = a;
 			this.y = a;
@@ -24,11 +24,11 @@ namespace PinkCasio.Decimal.Linal
 		{
 			return new vec3m(a.x - b.x, a.y - b.y, a.z - b.z);
 		}
-		public static vec3m operator *(double d, vec3m v)
+		public static vec3m operator *(decimal d, vec3m v)
 		{
 			return new vec3m(d * v.x, d * v.y, d * v.z);
 		}
-		public static vec3m operator /(vec3m a, double b)
+		public static vec3m operator /(vec3m a, decimal b)
 		{
 			if (b == 0)
 				throw new ArgumentException("Cannot divide by zero");
@@ -38,17 +38,17 @@ namespace PinkCasio.Decimal.Linal
 		{
 			return v.x * m.i + v.y * m.j + v.z * m.k;
 		}
-		public double Length()
+		public decimal Length()
 		{
-			return Math.Sqrt(x * x + y * y + z * z);
+			return Mathm.Sqrt(x * x + y * y + z * z);
 		}
-		public double MaxComp()
+		public decimal MaxComp()
 		{
 			return Math.Max(x, Math.Max(y, z));
 		}
 		public vec3m Normalize()
 		{
-			double length = this.Length();
+			decimal length = this.Length();
 			if (length == 0)
 				throw new ArgumentException("Cannot normalize zero length vector");
 			return this / length;
@@ -57,7 +57,7 @@ namespace PinkCasio.Decimal.Linal
 		{
 			return new vec3m(Math.Abs(x), Math.Abs(y), Math.Abs(z));
 		}
-		public static double Dot(vec3m a, vec3m b)
+		public static decimal Dot(vec3m a, vec3m b)
 		{
 			return a.x * b.x + a.y * b.y + a.z * b.z;
 		}
@@ -68,11 +68,11 @@ namespace PinkCasio.Decimal.Linal
 				a.z * b.x - a.x * b.z,
 				a.x * b.y - a.y * b.x);
 		}
-		public static vec3m Max(vec3m a, double b)
+		public static vec3m Max(vec3m a, decimal b)
 		{
 			return new vec3m(Math.Max(a.x, b), Math.Max(a.y, b), Math.Max(a.z, b));
 		}
-		public static vec3m Min(vec3m a, double b)
+		public static vec3m Min(vec3m a, decimal b)
 		{
 			return new vec3m(Math.Min(a.x, b), Math.Min(a.y, b), Math.Min(a.z, b));
 		}
