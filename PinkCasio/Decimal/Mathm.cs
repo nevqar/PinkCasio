@@ -8,7 +8,7 @@ namespace PinkCasio.Decimal
 {
 	public static class Mathm
 	{
-		public const decimal epsilon = 0.0m;
+		public static decimal epsilon = 0.0m;
 		public static decimal Abs(decimal a)
 		{
 			if (a >= 0)
