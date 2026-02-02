@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Linal
+namespace PinkCasio.Double.Linal
 {
 	public struct quaternion
 	{

@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Linal\Linal.csproj">
+    <ProjectReference Include="..\Linal\PinkCasio.csproj">
       <Project>{ba281bff-c1a4-4b4d-a805-ac36f9460341}</Project>
-      <Name>Linal</Name>
+      <Name>PinkCasio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,5 @@
 using System;
-namespace Linal
+namespace PinkCasio.Double.Linal
 {
 	public struct matrix3x3
 	{
@@ -60,10 +60,6 @@ namespace Linal
 				a * b.iy, a * b.jy, a * b.ky,
 				a * b.iz, a * b.jz, a * b.kz);
 		}
-		public static vec3 operator *(matrix3x3 m, vec3 v)
-		{
-			return v.x * m.i + v.y * m.j + v.z * m.k;
-		}
 		public static matrix3x3 operator *(matrix3x3 a, matrix3x3 b)
 		{
 			matrix3x3 c = new matrix3x3();
@@ -123,22 +119,6 @@ namespace Linal
 			Math.Cos(a), -Math.Sin(a), 0,
 			Math.Sin(a), Math.Cos(a), 0,
 			0, 0, 1);
-		}
-		public static vec3 Cramer(matrix3x3 a, vec3 b)
-		{
-			double det = a.Det();
-			if (det == 0)
-				throw new Exception("Determinant equals zero. No solution");
-			matrix3x3 ax = a;
-			ax.i = b;
-			double detx = ax.Det();
-			matrix3x3 ay = a;
-			ay.j = b;
-			double dety = ay.Det();
-			matrix3x3 az = a;
-			ay.k = b;
-			double detz = az.Det();
-			return new vec3(detx / det, dety / det, detz / det);
 		}
 		override public string ToString()
 		{

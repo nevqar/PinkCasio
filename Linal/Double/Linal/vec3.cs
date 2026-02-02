@@ -1,5 +1,5 @@
 using System;
-namespace Linal
+namespace PinkCasio.Double.Linal
 {
 	public struct vec3
 	{
@@ -33,6 +33,10 @@ namespace Linal
 			if (b == 0)
 				throw new ArgumentException("Cannot divide by zero");
 			return new vec3(a.x / b, a.y / b, a.z / b);
+		}
+		public static vec3 operator *(matrix3x3 m, vec3 v)
+		{
+			return v.x * m.i + v.y * m.j + v.z * m.k;
 		}
 		public double Length()
 		{

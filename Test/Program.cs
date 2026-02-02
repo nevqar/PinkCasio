@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Security.Claims;
-using Linal;
+using PinkCasio.Double.Linal;
+using PinkCasio.Decimal;
+using PinkCasio.Decimal.Linal;
 
 namespace Test
 {
@@ -8,7 +9,7 @@ namespace Test
 	{
 		static void Main(string[] args)
 		{
-			vec2 a = new vec2(0, 1);
+			vec2m a = new vec2m(0, 1);
 			vec3 b = new vec3(0, 1, 2);
 			quaternion c = new quaternion(0, 1, 2, 3);
 			matrix2x2 d = new matrix2x2(0, 1, 2, 3);
@@ -37,8 +38,7 @@ namespace Test
 			Console.WriteLine(e);
 			Console.WriteLine();
 
-			Console.WriteLine(matrix2x2.Cramer(d, a));
-			Console.WriteLine(matrix3x3.Cramer(e, b));
+			Console.WriteLine(Mathm.Sqrt(25m));
 		}
 	}
 }

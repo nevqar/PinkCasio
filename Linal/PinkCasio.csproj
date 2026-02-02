@@ -41,12 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="matrix2x2.cs" />
-    <Compile Include="matrix3x3.cs" />
+    <Compile Include="Decimal\Mathm.cs" />
+    <Compile Include="Decimal\Linal\matrix2x2m.cs" />
+    <Compile Include="Decimal\Linal\matrix3x3m.cs" />
+    <Compile Include="Decimal\Linal\vec2m.cs" />
+    <Compile Include="Decimal\Linal\vec3m.cs" />
+    <Compile Include="Double\Linal\matrix2x2.cs" />
+    <Compile Include="Double\Linal\matrix3x3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="quaternion.cs" />
-    <Compile Include="vec2.cs" />
-    <Compile Include="vec3.cs" />
+    <Compile Include="Double\Linal\quaternion.cs" />
+    <Compile Include="Double\Linal\vec2.cs" />
+    <Compile Include="Double\Linal\vec3.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

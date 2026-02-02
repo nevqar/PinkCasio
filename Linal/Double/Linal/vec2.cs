@@ -1,5 +1,5 @@
 using System;
-namespace Linal
+namespace PinkCasio.Double.Linal
 {
 	public struct vec2
 	{
@@ -22,19 +22,19 @@ namespace Linal
 		{
 			return new vec2(a.x - b.x, a.y - b.y);
 		}
-		public static vec2 operator *(vec2 a, double b)
+		public static vec2 operator *(double d, vec2 v)
 		{
-			return new vec2(a.x * b, a.y * b);
+			return new vec2(d * v.x, d * v.y);
 		}
-		public static vec2 operator *(double a, vec2 b)
+		public static vec2 operator /(vec2 v, double d)
 		{
-			return new vec2(a * b.x, a * b.y);
-		}
-		public static vec2 operator /(vec2 a, double b)
-		{
-			if (b == 0)
+			if (d == 0)
 				throw new ArgumentException("Cannot divide by zero");
-			return new vec2(a.x / b, a.y / b);
+			return new vec2(v.x / d, v.y / d);
+		}
+		public static vec2 operator *(matrix2x2 m, vec2 v)
+		{
+			return v.x * m.i + v.y * m.j;
 		}
 		public double Length()
 		{
