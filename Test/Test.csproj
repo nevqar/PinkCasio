@@ -50,7 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Linal\PinkCasio.csproj">
+    <ProjectReference Include="..\PinkCasio\PinkCasio.csproj">
       <Project>{ba281bff-c1a4-4b4d-a805-ac36f9460341}</Project>
       <Name>PinkCasio</Name>
     </ProjectReference>
