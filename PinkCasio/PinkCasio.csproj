@@ -46,6 +46,7 @@
     <Compile Include="Decimal\Linal\matrix3x3m.cs" />
     <Compile Include="Decimal\Linal\vec2m.cs" />
     <Compile Include="Decimal\Linal\vec3m.cs" />
+    <Compile Include="Double\Equations\Equations.cs" />
     <Compile Include="Double\Linal\matrix2x2.cs" />
     <Compile Include="Double\Linal\matrix3x3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
