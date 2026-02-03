@@ -9,7 +9,7 @@ namespace PinkCasio.Double.Equations
 {
 	public static class Equations
 	{
-		static double QuadraticEquation(double a, double b, double c, bool sign)
+		public static double QuadraticEquation(double a, double b, double c, bool sign)
 		{
 			double D = b * b - 4 * a * c;
 			if (D < 0)
@@ -19,7 +19,7 @@ namespace PinkCasio.Double.Equations
 			else
 				return (-b - Math.Sqrt(D)) / (2 * a);
 		}
-		static bool TryQuadraticEquation(double a, double b, double c, out double x1, out double x2)
+		public static bool TryQuadraticEquation(double a, double b, double c, out double x1, out double x2)
 		{
 			double D = b * b - 4 * a * c;
 			if (D < 0)
