@@ -24,7 +24,24 @@ namespace PinkCasio.Double.Linal
 				jy = value.y;
 			}
 		}
-
+		public vec2 x
+		{
+			get { return new vec2(ix, jx); }
+			set
+			{
+				ix = value.x;
+				jx = value.y;
+			}
+		}
+		public vec2 y
+		{
+			get { return new vec2(iy, jy); }
+			set
+			{
+				iy = value.x;
+				jy = value.y;
+			}
+		}
 		static public readonly matrix2x2 identity = new matrix2x2(
 			1, 0,
 			0, 1);

@@ -37,6 +37,36 @@ namespace PinkCasio.Double.Linal
 				kz = value.z;
 			}
 		}
+		public vec3 x
+		{
+			get { return new vec3(ix, jx, kx); }
+			set
+			{
+				ix = value.x;
+				jx = value.y;
+				kx = value.z;
+			}
+		}
+		public vec3 y
+		{
+			get { return new vec3(iy, jy, ky); }
+			set
+			{
+				iy = value.x;
+				jy = value.y;
+				ky = value.z;
+			}
+		}
+		public vec3 z
+		{
+			get { return new vec3(iz, jz, kz); }
+			set
+			{
+				iz = value.x;
+				jz = value.y;
+				kz = value.z;
+			}
+		}
 
 		static public readonly matrix3x3 identity = new matrix3x3(
 			1, 0, 0,
