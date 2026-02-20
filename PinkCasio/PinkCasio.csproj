@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Decimal\Equations\Equations.cs" />
     <Compile Include="Decimal\Mathm.cs" />
     <Compile Include="Decimal\Linal\matrix2x2m.cs" />
     <Compile Include="Decimal\Linal\matrix3x3m.cs" />

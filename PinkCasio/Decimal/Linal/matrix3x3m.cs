@@ -37,6 +37,36 @@ namespace PinkCasio.Decimal.Linal
 				kz = value.z;
 			}
 		}
+		public vec3m x
+		{
+			get { return new vec3m(ix, jx, kx); }
+			set
+			{
+				ix = value.x;
+				jx = value.y;
+				kx = value.z;
+			}
+		}
+		public vec3m y
+		{
+			get { return new vec3m(iy, jy, ky); }
+			set
+			{
+				iy = value.x;
+				jy = value.y;
+				ky = value.z;
+			}
+		}
+		public vec3m z
+		{
+			get { return new vec3m(iz, jz, kz); }
+			set
+			{
+				iz = value.x;
+				jz = value.y;
+				kz = value.z;
+			}
+		}
 
 		static public readonly matrix3x3m identity = new matrix3x3m(
 			1, 0, 0,
